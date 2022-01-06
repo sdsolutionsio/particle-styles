@@ -1,0 +1,219 @@
+/*
+.......
+PARTICLE STYLES
+.......
+*/
+
+.tablet_only,
+.tablet_only_flex,
+.tablet_only_inline,
+.mobile_only,
+.mobile_only_flex,
+.mobile_only_inline {
+    display: none !important;
+}
+
+/* TABLET BREAKPOINT */
+@media screen and (max-width: 1024px) {
+    .tablet_hide {
+        display: none !important;
+    }
+
+    .tablet_only {
+        display: block !important;
+    }
+
+    .tablet_only_flex {
+        display: flex !important;
+    }
+
+    .tablet_only_inline {
+        display: inline-block !important;
+    }
+
+    /* set height to auto on tablet */
+    /* makes scrollable lists fill screen instead of independently scrolling */
+    .tablet_fullheight {
+        height:auto !important;
+        max-height:unset !important;
+    }
+}
+
+/* MOBILE BREAKPOINT */
+@media screen and (max-width: 768px) {
+    .mobile_hide {
+        display:none !important;
+    }
+
+    /* TODO: deprecate */
+    .hide_element {
+        display: none !important;
+    }
+
+    .mobile_only {
+        display: block !important;
+    }
+
+    .mobile_only_flex {
+        display: flex !important;
+    }
+
+    .mobile_only_inline {
+        display:inline-block !important;
+    }
+
+    /* remove padding on mobile */
+    .mobile_pad_0 {
+        padding: 0;
+    }
+
+    .mobile_text_left {
+        text-align:left;
+    }
+
+    .mobile_text_center {
+        text-align:center;
+    }
+
+    .mobile_center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* set height to auto on mobile */
+    /* makes scrollable lists fill screen instead of independently scrolling */
+    .mobile_fullheight {
+        height:auto !important;
+        max-height:unset !important;
+    }
+
+    /* shrink tabs font on mobile */
+    .tabs_fullwidth.sm > .btn_tab,
+    .tabs_fullwidth.md > .btn_tab,
+    .tabs_fullwidth.lg > .btn_tab {
+        font-size:10px;
+    }
+}
+
+/* PRINTER STYLES */
+@media print {
+
+    html {
+        overflow-y:auto;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .layout_sidebar {
+        display:none;
+    }
+
+    .site {
+        display:block;
+        position:static;
+        height:auto;
+        overflow-y:hidden;
+    }
+
+    .site-content {
+        margin:0;
+        display:block;
+    }
+
+    #site-content {
+        margin:0 !important;
+    }
+
+    #site-content, #site-content * {
+        visibility: visible;
+    }
+
+
+    .page_container_color, .body_color {
+        color: #222 !important;
+        background-color: white !important;
+    }
+
+    .form_cell {
+        border:none !important;
+        padding:5px;
+    }
+
+    /*** PRINT CLASSES ***/
+
+    .print_hide {
+        display: none;
+    }
+
+    .print_break_after {
+        page-break-after:always;
+    }
+
+    .print_break_before {
+        page-break-before:always;
+    }
+
+    .print_break_avoid {
+        page-break-inside:avoid;
+    }
+}
+
+/* FIXES FOR IE 10+ */
+@media all and (-ms-high-contrast:none) {
+    .ie_block {
+        display: block;
+    }
+
+    /* make columns behave properly */
+    .col.size_1 {
+        flex-basis:10%;
+    }
+    .col.size_2 {
+        flex-basis:20%;
+    }
+    .col.size_3 {
+        flex-basis:30%;
+    }
+    .col.size_4{
+        flex-basis:40%;
+    }
+    .col.size_5 {
+        flex-basis:50%;
+    }
+    .col.size_6 {
+        flex-basis:60%;
+    }
+    .col.size_7 {
+        flex-basis:70%;
+    }
+    .col.size_8 {
+        flex-basis:80%;
+    }
+    .col.size_9 {
+        flex-basis:90%;
+    }
+    .col.size_10 {
+        flex-basis:100%;
+    }
+
+    .col.column > .col,
+    .row.column > .col {
+        flex-basis:auto !important;
+    }
+
+}
+
+/* hide always */
+.all_hide {
+    display:none !important;
+}

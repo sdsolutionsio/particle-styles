@@ -1,0 +1,643 @@
+/*
+.......
+PARTICLE STYLES
+.......
+*/
+
+/* NAVBAR ACCESSIBILITY */
+.menu_access {
+    text-decoration: none;
+}
+
+.menu_access:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* SIMPLE 100% */
+.height100 {
+    height: 100%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+/* ROWS */
+.row_block {
+    display: block;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    -ms-flex:1 1 100%;
+}
+
+.row.column {
+    flex-direction: column;
+}
+
+/* COLUMNS */
+.col {
+    display: flex;
+    flex: 0 1 auto;
+}
+
+.col.column {
+    flex-direction: column;
+}
+
+/* COLUMN SIZING BASED ON FLEX VALUES */
+.col.size_1 {
+    flex: 1;
+    -ms-flex: 1 1 auto;
+}
+
+.col.size_2 {
+    flex: 2;
+    -ms-flex: 2 1 auto;
+}
+
+.col.size_3 {
+    flex: 3;
+    -ms-flex: 3 1 auto;
+}
+
+.col.size_4 {
+    flex: 4;
+    -ms-flex: 4 1 auto;
+}
+
+.col.size_5 {
+    flex: 5;
+    -ms-flex: 5 1 auto;
+}
+
+.col.size_6 {
+    flex: 6;
+    -ms-flex: 6 1 auto;
+}
+
+.col.size_7 {
+    flex: 7;
+    -ms-flex: 7 1 auto;
+}
+
+.col.size_8 {
+    flex: 8;
+    -ms-flex: 8 1 auto;
+}
+
+.col.size_9 {
+    flex: 9;
+    -ms-flex: 9 1 auto;
+}
+
+.col.size_10 {
+    flex: 10;
+    -ms-flex: 10 1 auto;
+}
+
+
+
+
+/* BASIC TEXT ALIGNMENTS */
+.text_center {
+    text-align: center;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_right {
+    text-align: right;
+}
+
+/* COMPLEX TEXT ELEMENTS */
+.text {
+    font-weight:400;
+}
+
+.text.paragraph {
+    line-height: 150%;
+}
+
+.text.lighter {
+    font-weight: 100;
+}
+
+.text.light {
+    font-weight: 200;
+}
+
+.text.bold {
+    font-weight: 500;
+}
+
+.text.bolder {
+    font-weight: 600;
+}
+
+.text.faded {
+    opacity:0.8;
+}
+
+.text.left {
+    text-align: left;
+}
+
+.text.center {
+    text-align: center;
+}
+
+.text.right {
+    text-align: right;
+}
+
+.text.justify {
+    text-align: justify;
+}
+
+.text.underline {
+    text-decoration:underline;
+}
+
+.text.italic {
+    font-style:italic;
+}
+
+.text.xsm {
+    font-size: 10px;
+}
+
+.text.sm {
+    font-size: 12px;
+}
+
+.text.md {
+    font-size: 14px;
+}
+
+.text.lg {
+    font-size: 16px;
+}
+
+.text.xlg {
+    font-size: 18px;
+}
+
+.text.caps {
+    text-transform: capitalize;
+}
+
+.text.uppercase {
+    text-transform: uppercase;
+}
+
+/* TEXT OVERFLOW CLASSES */
+.text_nowrap {
+    white-space: nowrap;
+}
+
+.text_wrap {
+    white-space:normal;
+}
+
+/* NO OVERFLOW WITH ELLIPSIS */
+.text_ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+p {
+    margin:0;
+}
+
+/* fix image width in paragraph elements */
+p img {
+    max-width: 100%;
+}
+
+/* LIST ITEMS WITH TOP/BOTTOM BORDERS */
+.list .list_item {
+    border-width:0 0 1px 0;
+}
+.list .list_item:last-child {
+    border-width:0;
+}
+
+/* LIST ITEMS WITH ALTERNATING BACKGROUND COLORS - ODD */
+.bg_everyodd > * {
+    background-color:rgba(128,128,128,0.05);
+}
+.bg_everyodd > :nth-child(even) {
+    background:none !important;
+}
+/* alternative if list items are components */
+.bg_everyodd_component > * > div {
+    background-color:rgba(128,128,128,0.05);
+}
+.bg_everyodd_component > :nth-child(even) > div {
+    background:none !important;
+}
+
+/* LIST ITEMS WITH ALTERNATING BACKGROUND COLORS - EVEN */
+.bg_everyeven > * {
+    background-color:rgba(128,128,128,0.05);
+}
+.bg_everyeven > :nth-child(odd) {
+    background:none !important;
+}
+/* alternative if list items are components */
+.bg_everyeven_component > * > div {
+    background-color:rgba(128,128,128,0.05);
+}
+.bg_everyeven_component > :nth-child(odd) > div {
+    background:none !important;
+}
+
+/* SCROLLING */
+.scroll_y {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.scroll_yauto {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scroll_x {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.scroll_xauto {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll_xy {
+    overflow-x: scroll;
+    overflow-y: scroll;
+}
+
+.scroll_xyauto {
+    overflow-x: auto;
+    overflow-y: auto;
+}
+.no_scroll, .no_overflow {
+    overflow:hidden !important;
+}
+
+/* TODO: to remove, old */
+.scroll_none {
+    overflow:hidden !important;
+}
+
+
+/* WRAPPING */
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap_reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+/* FLEX ALIGNMENTS */
+.top_center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.top_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.top_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.center_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.center_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bottom_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.bottom_center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.bottom_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.space_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.space_around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.space_evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.v_center {
+    display: flex;
+    align-items: center;
+}
+
+.h_center {
+    display: flex;
+    justify-content: center;
+}
+
+/* MIN WIDTH VALUES */
+.min_w0 {
+    min-width: 0;
+}
+
+.min_w25 {
+    min-width: 25px;
+}
+
+.min_w50 {
+    min-width: 50px;
+}
+
+.min_w75 {
+    min-width: 75px;
+}
+
+.min_w100 {
+    min-width: 100px;
+}
+
+.min_w150 {
+    min-width: 150px;
+}
+
+.min_w200 {
+    min-width: 200px;
+}
+
+.min_w250 {
+    min-width: 250px;
+}
+
+.min_w280 {
+    min-width: 280px;
+}
+
+/* MIN HEIGHT VALUES */
+.min_h25 {
+    min-height: 25px;
+}
+
+.min_h40 {
+    min-height:40px;
+}
+
+.min_h45 {
+    min-height:45px;
+}
+
+.min_h50 {
+    min-height: 50px;
+}
+
+.min_h100 {
+    min-height: 100px;
+}
+
+.min_h150 {
+    min-height: 150px;
+}
+
+.min_h200 {
+    min-height: 200px;
+}
+
+.min_h250 {
+    min-height: 250px;
+}
+
+.min_h300 {
+    min-height: 300px;
+}
+
+.min_h350 {
+    min-height: 350px;
+}
+
+.min_h400 {
+    min-height: 400px;
+}
+
+/* TODO: pull text and header styles into separate file */
+
+/* RESPONSIVE HEADERS */
+.header {
+    outline: none;
+    font-weight:500;
+    opacity:0.9;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.paragraph {
+    line-height:1.5;
+}
+
+/* center header */
+.header.center {
+    text-align: center;
+}
+
+.header.xsm {
+    font-size: 20px;
+}
+
+.header.sm {
+    font-size: 24px;
+}
+
+.header.md {
+    font-size: 28px;
+}
+
+.header.lg {
+    font-size: 32px;
+}
+
+.header.xlg {
+    font-size: 36px;
+}
+
+.header.lighter {
+    font-weight: 200;
+}
+
+.header.light {
+    font-weight: 300;
+}
+
+.header.bold {
+    font-weight: 600;
+}
+
+.header.bolder {
+    font-weight: 700;
+}
+
+/** HORIZONTAL RULES THAT ARE COMPATIBLE WITH THEMES **/
+.hr {
+    border-width:0 0 1px 0 !important;
+    border-style:solid;
+}
+
+.hr_light {
+    border-width:0 0 1px 0 !important;
+    border-style:solid;
+    border-color:rgba(255,255,255,0.2);
+}
+
+/** VERTICAL RULES THAT ARE COMPATIBLE WITH THEMES **/
+.vr {
+    border-width:0 1px 0 0 !important;
+    border-style:solid;
+}
+
+.vr_light {
+    border-width:0 1px 0 0 !important;
+    border-style:solid;
+    border-color:rgba(255,255,255,0.2);
+}
+
+/* RELATIVE AND ABSOLUTE POSITIONING */
+.position_relative {
+    position:relative;
+}
+
+.position_absolute {
+    position:absolute;
+}
+
+/* OPACITY BASED BARS FOR TOP LEFT HEADERS */
+.bar_1 {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 5px;
+}
+
+.bar_2 {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 5px;
+}
+
+.bar_3 {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 5px;
+}
+
+/*** HEADER AND FOOTER COLOR BAR */
+.color_bar {
+    display: flex;
+    background-color:rgba(128,128,128,0.2);
+    height: 2px;
+    min-height:2px;
+}
+/* align to left */
+.color_bar.left {
+    justify-content:flex-start;
+}
+/* align to right (default */
+.color_bar, .color_bar.right {
+    justify-content:flex-end;
+}
+/* div containing colors */
+.color_stripes {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 25%;
+    min-width:250px;
+}
+/* add space to left of colors */
+.color_bar.left .color_stripes {
+    margin-left:10%;
+}
+/* add space to right of colors (default) */
+.color_bar .color_stripes,
+.color_bar.right .color_stripes {
+    margin-right:10%;
+}
+/* flexible color blocks */
+.color_stripes > div {
+    flex: 1;
+}
+
+/***** TODO: DELETE? *****/
+/*TABLE ROW */
+.table_btn {
+    font-size: 10pt;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.go_empty {
+    width: 20px;
+}
+
+.table_btn .go {
+    font-size: 7pt;
+    width: 20px;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.table_btn:hover .go {
+    opacity: 1;
+}
+
+.table_cell {
+    padding-left: 5px;
+    padding-right: 5px;
+}

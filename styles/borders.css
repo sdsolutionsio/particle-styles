@@ -1,0 +1,47 @@
+/*
+.......
+PARTICLE STYLES
+.......
+*/
+
+
+/* BORDER RADIUSES */
+.brad_0 {
+    border-radius: 0;
+}
+
+.brad_3 {
+    border-radius: 3px;
+}
+
+.brad_5 {
+    border-radius: 5px;
+}
+
+.brad_10 {
+    border-radius: 10px;
+}
+
+
+/* SHOW BORDERS ON ONLY ONE SIDE */
+.border_top {
+    border-width: 1px 0 0 0 !important;
+}
+.border_bottom {
+    border-width: 0 0 1px 0 !important;
+}
+.border_left {
+    border-width: 0 0 0 1px !important;
+}
+.border_right {
+    border-width:0 1px 0 0 !important;
+}
+.border_x {
+    border-width:0 1px !important;
+}
+.border_y {
+    border-width:1px 0 !important;
+}
+.border_none {
+    border-width:0 !important;
+}

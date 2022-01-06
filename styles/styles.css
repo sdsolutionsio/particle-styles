@@ -1,0 +1,72 @@
+/*
+.......
+PARTICLE STYLES
+.......
+*/
+
+/* styles that apply to everything */
+*,
+*:before,
+*:after {
+    /* everything should be border box */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+
+/* main div holding all structural elements */
+.site {
+    position:fixed; /* so 100% height works correctly in ios safari */
+    height:100%;
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    /* stretch to fill screen */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* div holding main content under nav */
+.site-content {
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+.page_container {
+    display: flex;
+    min-height: 450px;
+    min-width: 280px;
+}
+
+.page_container.gradient {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%,
+    rgba(128, 128, 128, 0) 50%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+
