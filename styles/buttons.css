@@ -60,13 +60,60 @@ button.clear {
     padding:6px 14px;
 }
 
-/* class added if there is an icon; sets padding */
-.btn.icon_left {
-    padding-left:2.5em;
+
+/********************** UNIVERSAL BUTTON CLASSES ************************/
+
+.btnset {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    white-space:nowrap;
+    flex-shrink:0;
+    padding:0;
+
 }
-.btn.icon_right {
-    padding-right:2.5em;
+
+.btnset.xsm{
+    font-size: 7pt;
+    line-height: 7pt;
+    padding: 3px 15px;
+    height:20px;
 }
+.btnset.sm{
+    font-size: 9pt;
+    line-height: 9pt;
+    padding: 3px 15px;
+}
+.btnset.md{
+    font-size: 11pt;
+    line-height: 11pt;
+    padding: 5px 15px;
+}
+.btnset.lg {
+    font-size: 13pt;
+    line-height: 13pt;
+    padding: 7px 20px;
+}
+.btnset.xlg {
+    font-size: 15pt;
+    line-height: 15pt;
+    padding: 9px 25px;
+}
+.btnset.spaced{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.btnset.pilled{
+    border-radius:88px;
+}
+
+
+
+
 
 /* style the icon in the button */
 .btn.icon_left > .icon,
@@ -182,23 +229,6 @@ button[disabled] {
 
 /************************* END TRADITIONAL BUTTON CLASSES *********************************/
 
-.fun_lnk {
-    color: #AAA;
-    font-size: 8pt;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    text-transform: uppercase;
-}
-
-.fun_lnk:hover {
-    font-size: 16pt;
-    color: #05ABE0;
-    border-left: 1px solid #CCC;
-    border-right: 1px solid #CCC;
-    padding: 5px 20px;
-}
-
 /* for adding a simple hand grabbing pointer */
 .t_drag_btn {
     cursor: grab;
@@ -213,83 +243,6 @@ button[disabled] {
     cursor: grabbing;
 }
 
-/* PULSE BUTTONS */
-.btn_pulse {
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    background-color: rgba(0, 0, 0, 0.3);
-    user-select: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 50%;
-    color: #FFF;
-    --hover: #FFF;
-    font-family: Montserrat, sans-serif;
-    outline: none;
-    padding:0;
-    overflow:visible;
-}
-
-.btn_pulse.xsm {
-    margin: 1px 3px;
-    min-height: 20px;
-    height: 20px;
-    min-width:20px;
-    width: 20px;
-    font-size: 8pt;
-}
-
-.btn_pulse.sm {
-    margin: 2px 5px;
-    min-height: 25px;
-    height: 25px;
-    min-width: 25px;
-    width: 25px;
-    font-size: 10pt;
-}
-
-.btn_pulse.md {
-    margin: 3px 7px;
-    min-height: 30px;
-    height: 30px;
-    min-width: 30px;
-    width: 30px;
-    font-size: 13pt;
-}
-
-.btn_pulse.lg {
-    margin: 5px 9px;
-    min-height: 55px;
-    height: 55px;
-    min-width: 55px;
-    width: 55px;
-    font-size: 17pt;
-}
-
-.btn_pulse.xlg {
-    margin: 5px;
-    min-height: 90px;
-    height: 90px;
-    min-width: 90px;
-    width: 90px;
-    font-size: 19pt;
-}
-
-.btn_pulse:hover {
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    background-color: rgba(255, 255, 255, 0.8);
-    color: rgba(0, 0, 0, 0.7);
-    -webkit-animation: pulse 1s;
-    animation: pulse 1s;
-    box-shadow: 0 0 0 1em rgba(255, 255, 255, 0);
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 var(--hover);
-    }
-}
 
 /* INFO BUTTONS */
 /* TODO: check usages */
@@ -312,37 +265,7 @@ button[disabled] {
     font-weight: 500;
 }
 
-/* HIGHLIGHT BUTTON */
-/* TODO: remove, unused */
-.btn_highlight{
-    transition:all 0.2s ease-in-out;
-}
-.btn_highlight:hover{
-    background-color:rgba(0,0,0,0.08);
-}
 
-/* PRIORITY BUTTON */
-/* TODO: check usages and remove if unused */
-.prior_btn {
-    width: 8px;
-    border-radius: 3px;
-    transition: all 0.2s ease-in-out;
-    padding: 0;
-}
-
-.prior_btn:hover, .prior_btn:focus {
-    width: 20px;
-}
-
-.prior_btn_icon {
-    transition: all 0.2s ease-in-out;
-    opacity: 0;
-}
-
-.prior_btn:hover > .prior_btn_icon,
-.prior_btn:focus > .prior_btn_icon {
-    opacity: 1;
-}
 
 /***************** FLOATING TABS *********************/
 .tabs .btn_tab {
@@ -487,31 +410,4 @@ button[disabled] {
 }
 .btn_group.rounded .btn {
     border-radius:50px !important;
-}
-
-/* like button class, but for list items */
-.list_btn{
-    appearance: none;
-    user-select:none;
-    cursor:pointer;
-    border:none;
-    outline:none;
-    padding:0;
-    display:flex;
-    flex:1;
-    transition:all 0.2s ease-in-out;
-    align-items:stretch;
-    text-align:left;
-    font-size:14px;
-    margin:0;
-}
-.list_btn > .go_icon {
-    opacity:0;
-    transform:scaleX(0);
-    transform-origin:left center;
-    transition:all 0.2s ease-in-out;
-}
-.list_btn:hover > .go_icon {
-    opacity:1;
-    transform:scaleX(1);
 }

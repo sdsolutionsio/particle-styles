@@ -204,6 +204,14 @@ PARTICLE STYLES
     white-space:normal;
 }
 
+.overflow_hide
+{
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+
 /* NO OVERFLOW WITH ELLIPSIS */
 .text_ellipsis {
     overflow: hidden;
@@ -391,90 +399,6 @@ p img {
     justify-content: center;
 }
 
-/* MIN WIDTH VALUES */
-.min_w0 {
-    min-width: 0;
-}
-
-.min_w25 {
-    min-width: 25px;
-}
-
-.min_w50 {
-    min-width: 50px;
-}
-
-.min_w75 {
-    min-width: 75px;
-}
-
-.min_w100 {
-    min-width: 100px;
-}
-
-.min_w150 {
-    min-width: 150px;
-}
-
-.min_w200 {
-    min-width: 200px;
-}
-
-.min_w250 {
-    min-width: 250px;
-}
-
-.min_w280 {
-    min-width: 280px;
-}
-
-/* MIN HEIGHT VALUES */
-.min_h25 {
-    min-height: 25px;
-}
-
-.min_h40 {
-    min-height:40px;
-}
-
-.min_h45 {
-    min-height:45px;
-}
-
-.min_h50 {
-    min-height: 50px;
-}
-
-.min_h100 {
-    min-height: 100px;
-}
-
-.min_h150 {
-    min-height: 150px;
-}
-
-.min_h200 {
-    min-height: 200px;
-}
-
-.min_h250 {
-    min-height: 250px;
-}
-
-.min_h300 {
-    min-height: 300px;
-}
-
-.min_h350 {
-    min-height: 350px;
-}
-
-.min_h400 {
-    min-height: 400px;
-}
-
-/* TODO: pull text and header styles into separate file */
-
 /* RESPONSIVE HEADERS */
 .header {
     outline: none;
@@ -561,83 +485,77 @@ p img {
     position:absolute;
 }
 
-/* OPACITY BASED BARS FOR TOP LEFT HEADERS */
-.bar_1 {
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 5px;
-}
 
-.bar_2 {
-    background-color: rgba(255, 255, 255, 0.4);
-    width: 5px;
+/* TOOLTIP STYLES FOR 'particle_toolip' COMPONENT */
+.particle_tooltip {
+    min-width: 75px;
+    max-width: 200px;
+    background-color: #2f2f2f;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-size:12px;
+    line-height:1.5;
+    position: absolute;
+    z-index: 4;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+    animation-name: fadeInTooltip;
+    animation-duration: 0.4s;
 }
-
-.bar_3 {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 5px;
+@keyframes fadeInTooltip {
+    0%   {opacity:0;}
+    100% {opacity:1;}
 }
-
-/*** HEADER AND FOOTER COLOR BAR */
-.color_bar {
-    display: flex;
-    background-color:rgba(128,128,128,0.2);
-    height: 2px;
-    min-height:2px;
+.particle_tooltip.top {
+    transform-origin:bottom center;
 }
-/* align to left */
-.color_bar.left {
-    justify-content:flex-start;
+.particle_tooltip.top::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #2f2f2f transparent transparent transparent;
 }
-/* align to right (default */
-.color_bar, .color_bar.right {
-    justify-content:flex-end;
+.particle_tooltip.bottom {
+    transform-origin:top center;
 }
-/* div containing colors */
-.color_stripes {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 25%;
-    min-width:250px;
+.particle_tooltip.bottom::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #2f2f2f transparent;
 }
-/* add space to left of colors */
-.color_bar.left .color_stripes {
-    margin-left:10%;
+.particle_tooltip.left {
+    transform-origin:right center;
 }
-/* add space to right of colors (default) */
-.color_bar .color_stripes,
-.color_bar.right .color_stripes {
-    margin-right:10%;
+.particle_tooltip.left::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #2f2f2f;
 }
-/* flexible color blocks */
-.color_stripes > div {
-    flex: 1;
+.particle_tooltip.right {
+    transform-origin:left center;
 }
-
-/***** TODO: DELETE? *****/
-/*TABLE ROW */
-.table_btn {
-    font-size: 10pt;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-}
-
-.go_empty {
-    width: 20px;
-}
-
-.table_btn .go {
-    font-size: 7pt;
-    width: 20px;
-    transition: all 0.4s ease-in-out;
-    opacity: 0;
-}
-
-.table_btn:hover .go {
-    opacity: 1;
-}
-
-.table_cell {
-    padding-left: 5px;
-    padding-right: 5px;
+.particle_tooltip.right::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #2f2f2f transparent transparent;
 }

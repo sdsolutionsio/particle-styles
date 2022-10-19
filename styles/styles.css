@@ -29,6 +29,9 @@ a {
     text-decoration: none;
 }
 
+nav {
+    display: flex;
+}
 footer {
     display: flex;
     align-items: center;
@@ -63,10 +66,4 @@ footer {
     min-height: 450px;
     min-width: 280px;
 }
-
-.page_container.gradient {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%,
-    rgba(128, 128, 128, 0) 50%, rgba(0, 0, 0, 0.1) 100%);
-}
-
 
