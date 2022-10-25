@@ -4,14 +4,7 @@ PARTICLE STYLES
 .......
 */
 
-/* NAVBAR ACCESSIBILITY */
-.menu_access {
-    text-decoration: none;
-}
 
-.menu_access:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-}
 
 /* SIMPLE 100% */
 .height100 {
@@ -50,52 +43,42 @@ PARTICLE STYLES
 /* COLUMN SIZING BASED ON FLEX VALUES */
 .col.size_1 {
     flex: 1;
-    -ms-flex: 1 1 auto;
 }
 
 .col.size_2 {
     flex: 2;
-    -ms-flex: 2 1 auto;
 }
 
 .col.size_3 {
     flex: 3;
-    -ms-flex: 3 1 auto;
 }
 
 .col.size_4 {
     flex: 4;
-    -ms-flex: 4 1 auto;
 }
 
 .col.size_5 {
     flex: 5;
-    -ms-flex: 5 1 auto;
 }
 
 .col.size_6 {
     flex: 6;
-    -ms-flex: 6 1 auto;
 }
 
 .col.size_7 {
     flex: 7;
-    -ms-flex: 7 1 auto;
 }
 
 .col.size_8 {
     flex: 8;
-    -ms-flex: 8 1 auto;
 }
 
 .col.size_9 {
     flex: 9;
-    -ms-flex: 9 1 auto;
 }
 
 .col.size_10 {
     flex: 10;
-    -ms-flex: 10 1 auto;
 }
 
 
@@ -300,10 +283,6 @@ p img {
     overflow:hidden !important;
 }
 
-/* TODO: to remove, old */
-.scroll_none {
-    overflow:hidden !important;
-}
 
 
 /* WRAPPING */
@@ -452,6 +431,10 @@ p img {
     font-weight: 700;
 }
 
+.subheader {
+    line-height: 12px;
+}
+
 /** HORIZONTAL RULES THAT ARE COMPATIBLE WITH THEMES **/
 .hr {
     border-width:0 0 1px 0 !important;
@@ -559,3 +542,108 @@ p img {
     border-style: solid;
     border-color: transparent #2f2f2f transparent transparent;
 }
+.draggable_placeholder {
+    background-color: rgba(200,200,200,0.2);
+    border: dotted 3px rgba(200,200,200,0.3);
+    box-sizing: border-box;
+    height: 75px;
+}
+.editor_slide{
+    transition:0.1s ease all;
+}
+
+.drag_handle {
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+    cursor: ns-resize;
+}
+
+.drag_handle:hover{
+    opacity: 1.0;
+    cursor: ns-resize;
+}
+.row_handle {
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+}
+
+.row_handle:hover{
+    opacity: 1.0;
+}
+.drag_field{
+    z-index: 900;
+    cursor: move;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+.drag_field:hover{
+    cursor: move;
+    background-color: rgba(6, 119, 197, 0.1);
+}
+
+.row_config {
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+}
+
+.row_config:hover{
+    opacity: 1.0;
+    cursor: pointer;
+}
+.rowgrow{
+    opacity: 0.8;
+    box-shadow: 0 0 0 5px rgba(255,255,255,0);
+    transition: all .1s ease-in-out;
+}
+.rowgrow:hover{
+    opacity: 1.0;
+    z-index: 900;
+    transform: scale(1.4);
+    box-shadow: 0 0 0 5px rgba(255,255,255,1);
+}
+.rowadd{
+    transform: scale(0.7);
+    transition: all .1s ease-in-out;
+}
+.rowadd:hover{
+    transform: scale(1.0);
+}
+.edit_field {
+    display: flex;
+    flex: 1;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+.editfieldhov:hover .edit_field {
+    opacity:1;
+}
+
+/* LINES with ELLIPSIS */
+
+.line_item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+.line_ellipsis {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    text-align: left;
+}
+.line_end {
+    white-space: nowrap;
+}
+
+/*  */
+.overflow_hide
+{
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+

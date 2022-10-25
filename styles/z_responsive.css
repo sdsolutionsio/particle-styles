@@ -45,7 +45,6 @@ PARTICLE STYLES
         display:none !important;
     }
 
-    /* TODO: deprecate */
     .hide_element {
         display: none !important;
     }
@@ -87,12 +86,6 @@ PARTICLE STYLES
         max-height:unset !important;
     }
 
-    /* shrink tabs font on mobile */
-    .tabs_fullwidth.sm > .btn_tab,
-    .tabs_fullwidth.md > .btn_tab,
-    .tabs_fullwidth.lg > .btn_tab {
-        font-size:10px;
-    }
 }
 
 /* PRINTER STYLES */
@@ -216,4 +209,23 @@ PARTICLE STYLES
 /* hide always */
 .all_hide {
     display:none !important;
+}
+
+/* Footer and Header Sticky */
+
+.footer_sticky {
+    position: sticky;bottom: 0;z-index: 999;
+}
+@media screen and (max-width: 768px) {
+    .footer_sticky {
+        position: relative;z-index: 1;
+    }
+}
+.header_sticky {
+    position: sticky;top: 0;z-index: 999;
+}
+@media screen and (max-width: 768px) {
+    .header_sticky {
+        position: relative;z-index: 1;
+    }
 }
