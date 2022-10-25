@@ -43,24 +43,6 @@ PARTICLE STYLES
     box-shadow: 0 2px 5px 1px rgba(0,0,0,0.07);
 }
 
-/******************* WORKING LINES ANIMATION ********************/
-
-.superinner {
-    animation:mymove 10s linear infinite;
-    background-image: url('assets/images/moving_lines2.png');
-    background-size: 100%;
-}
-
-@keyframes mymove {
-    from {
-        background-position: 0% 0%;
-    }
-    to {
-        background-position: 0% -100%;
-    }
-}
-
-
 
 /******************* ANIMATIONS ********************/
 .hov_sm_grow:hover {
