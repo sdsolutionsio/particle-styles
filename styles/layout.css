@@ -83,142 +83,6 @@ PARTICLE STYLES
 
 
 
-
-/* BASIC TEXT ALIGNMENTS */
-.text_center {
-    text-align: center;
-}
-
-.text_left {
-    text-align: left;
-}
-
-.text_right {
-    text-align: right;
-}
-
-/* COMPLEX TEXT ELEMENTS */
-.text {
-    font-weight:400;
-}
-
-.text.paragraph {
-    line-height: 150%;
-}
-
-.text.lighter {
-    font-weight: 100;
-}
-
-.text.light {
-    font-weight: 200;
-}
-
-.text.bold {
-    font-weight: 500;
-}
-
-.text.bolder {
-    font-weight: 600;
-}
-
-.text.faded {
-    opacity:0.8;
-}
-
-.text.left {
-    text-align: left;
-}
-
-.text.center {
-    text-align: center;
-}
-
-.text.right {
-    text-align: right;
-}
-
-.text.justify {
-    text-align: justify;
-}
-
-.text.underline {
-    text-decoration:underline;
-}
-
-.text.italic {
-    font-style:italic;
-}
-
-.text.xsm {
-    font-size: 10px;
-}
-
-.text.sm {
-    font-size: 12px;
-}
-
-.text.md {
-    font-size: 14px;
-}
-
-.text.lg {
-    font-size: 16px;
-}
-
-.text.xlg {
-    font-size: 18px;
-}
-
-.text.caps {
-    text-transform: capitalize;
-}
-
-.text.uppercase {
-    text-transform: uppercase;
-}
-
-/* TEXT OVERFLOW CLASSES */
-.text_nowrap {
-    white-space: nowrap;
-}
-
-.text_wrap {
-    white-space:normal;
-}
-
-.overflow_hide
-{
-    text-overflow:ellipsis;
-    overflow: hidden;
-    white-space:nowrap;
-}
-
-
-/* NO OVERFLOW WITH ELLIPSIS */
-.text_ellipsis {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-p {
-    margin:0;
-}
-
-/* fix image width in paragraph elements */
-p img {
-    max-width: 100%;
-}
-
-/* LIST ITEMS WITH TOP/BOTTOM BORDERS */
-.list .list_item {
-    border-width:0 0 1px 0;
-}
-.list .list_item:last-child {
-    border-width:0;
-}
-
 /* LIST ITEMS WITH ALTERNATING BACKGROUND COLORS - ODD */
 .bg_everyodd > * {
     background-color:rgba(128,128,128,0.05);
@@ -378,86 +242,7 @@ p img {
     justify-content: center;
 }
 
-/* RESPONSIVE HEADERS */
-.header {
-    outline: none;
-    font-weight:500;
-    opacity:0.9;
-    transition: all 0.3s ease-in-out;
-}
 
-.header.paragraph {
-    line-height:1.5;
-}
-
-/* center header */
-.header.center {
-    text-align: center;
-}
-
-.header.xsm {
-    font-size: 20px;
-}
-
-.header.sm {
-    font-size: 24px;
-}
-
-.header.md {
-    font-size: 28px;
-}
-
-.header.lg {
-    font-size: 32px;
-}
-
-.header.xlg {
-    font-size: 36px;
-}
-
-.header.lighter {
-    font-weight: 200;
-}
-
-.header.light {
-    font-weight: 300;
-}
-
-.header.bold {
-    font-weight: 600;
-}
-
-.header.bolder {
-    font-weight: 700;
-}
-
-.subheader {
-    line-height: 12px;
-}
-
-/** HORIZONTAL RULES THAT ARE COMPATIBLE WITH THEMES **/
-.hr {
-    border-width:0 0 1px 0 !important;
-    border-style:solid;
-}
-
-.hr_light {
-    border-width:0 0 1px 0 !important;
-    border-style:solid;
-    border-color:rgba(255,255,255,0.2);
-}
-
-/** VERTICAL RULES THAT ARE COMPATIBLE WITH THEMES **/
-.vr {
-    border-width:0 1px 0 0 !important;
-    border-style:solid;
-}
-
-.vr_light {
-    border-width:0 1px 0 0 !important;
-    border-style:solid;
-    border-color:rgba(255,255,255,0.2);
-}
 
 /* RELATIVE AND ABSOLUTE POSITIONING */
 .position_relative {
@@ -481,7 +266,7 @@ p img {
     font-size:12px;
     line-height:1.5;
     position: absolute;
-    z-index: 4;
+    z-index: 1000;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
     animation-name: fadeInTooltip;
     animation-duration: 0.4s;
@@ -490,9 +275,13 @@ p img {
     0%   {opacity:0;}
     100% {opacity:1;}
 }
+
 .particle_tooltip.top {
     transform-origin:bottom center;
 }
+
+/* PARTICLE TOOL TIPS */
+
 .particle_tooltip.top::after {
     content: " ";
     position: absolute;
@@ -533,89 +322,14 @@ p img {
     transform-origin:left center;
 }
 .particle_tooltip.right::after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent #2f2f2f transparent transparent;
-}
-.draggable_placeholder {
-    background-color: rgba(200,200,200,0.2);
-    border: dotted 3px rgba(200,200,200,0.3);
-    box-sizing: border-box;
-    height: 75px;
-}
-.editor_slide{
-    transition:0.1s ease all;
-}
-
-.drag_handle {
-    opacity: 0.5;
-    transition: all .3s ease-in-out;
-    cursor: ns-resize;
-}
-
-.drag_handle:hover{
-    opacity: 1.0;
-    cursor: ns-resize;
-}
-.row_handle {
-    opacity: 0.5;
-    transition: all .3s ease-in-out;
-}
-
-.row_handle:hover{
-    opacity: 1.0;
-}
-.drag_field{
-    z-index: 900;
-    cursor: move;
-    border-radius: 3px;
-    transition: all .3s ease-in-out;
-}
-.drag_field:hover{
-    cursor: move;
-    background-color: rgba(6, 119, 197, 0.1);
-}
-
-.row_config {
-    opacity: 0.5;
-    transition: all .3s ease-in-out;
-}
-
-.row_config:hover{
-    opacity: 1.0;
-    cursor: pointer;
-}
-.rowgrow{
-    opacity: 0.8;
-    box-shadow: 0 0 0 5px rgba(255,255,255,0);
-    transition: all .1s ease-in-out;
-}
-.rowgrow:hover{
-    opacity: 1.0;
-    z-index: 900;
-    transform: scale(1.4);
-    box-shadow: 0 0 0 5px rgba(255,255,255,1);
-}
-.rowadd{
-    transform: scale(0.7);
-    transition: all .1s ease-in-out;
-}
-.rowadd:hover{
-    transform: scale(1.0);
-}
-.edit_field {
-    display: flex;
-    flex: 1;
-    transition: all .3s ease-in-out;
-    opacity: 0;
-}
-.editfieldhov:hover .edit_field {
-    opacity:1;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #2f2f2f transparent transparent;
 }
 
 /* LINES with ELLIPSIS */

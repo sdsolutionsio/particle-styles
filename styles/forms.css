@@ -4,6 +4,136 @@ PARTICLE STYLES
 .......
 */
 
+/* INTAKE FORM STYLES  */
+input::placeholder {
+  opacity: .5;
+  color: inherit;
+}
+select::placeholder {
+  opacity: .5;
+  color: inherit;
+}
+
+input[type=radio]{
+  accent-color: var(--ok-button-color)
+}
+.ptl_placeholder {
+  opacity: .5;
+  color: inherit;
+}
+.ptl_input {
+  display: flex;
+  align-items: center;
+  flex:auto;
+  width: 100%;
+  margin: 0;
+  outline: none;
+}
+.ptl_input_text {
+  font-size: 14pt;
+}
+.ptl_input_bg_color{
+  background-color: #ffffff;
+}
+.ptl_input_brdr_color{
+  border-color: #e7e7e7;
+}
+.ptl_input_brdr_size{
+  border-style: solid;
+  border-width: 1px;
+}
+.ptl_input_brdr_radius{
+  border-radius: 5px;
+}
+.ptl_input_height{
+  height:50px;
+}
+.ptl_input_padding{
+  padding: 0 10px;
+}
+
+
+/* AUTHORING FORM BUILDER UI BITS */
+
+.draggable_placeholder {
+  background-color: rgba(200,200,200,0.2);
+  border: dotted 3px rgba(200,200,200,0.3);
+  box-sizing: border-box;
+  height: 75px;
+}
+.editor_slide{
+  transition:0.1s ease all;
+}
+
+.drag_handle {
+  opacity: 0.5;
+  transition: all .3s ease-in-out;
+  cursor: ns-resize;
+}
+
+.drag_handle:hover{
+  opacity: 1.0;
+  cursor: ns-resize;
+}
+.row_handle {
+  opacity: 0.5;
+  transition: all .3s ease-in-out;
+}
+
+.row_handle:hover{
+  opacity: 1.0;
+}
+.drag_field{
+  z-index: 900;
+  cursor: move;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+.drag_field:hover{
+  cursor: move;
+  background-color: rgba(6, 119, 197, 0.1);
+}
+
+.row_config {
+  opacity: 0.5;
+  transition: all .3s ease-in-out;
+}
+
+.row_config:hover{
+  opacity: 1.0;
+  cursor: pointer;
+}
+.rowgrow{
+  opacity: 0.8;
+  box-shadow: 0 0 0 5px rgba(255,255,255,0);
+  transition: all .1s ease-in-out;
+}
+.rowgrow:hover{
+  opacity: 1.0;
+  z-index: 900;
+  transform: scale(1.4);
+  box-shadow: 0 0 0 5px rgba(255,255,255,1);
+}
+.rowadd{
+  transform: scale(0.7);
+  transition: all .1s ease-in-out;
+}
+.rowadd:hover{
+  transform: scale(1.0);
+}
+.edit_field {
+  display: flex;
+  flex: 1;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+.editfieldhov:hover .edit_field {
+  opacity:1;
+}
+
+
+
+
 
 /* DISABLED STATES FOR INPUTS */
 input:disabled, textarea:disabled, select:disabled {
@@ -12,8 +142,21 @@ input:disabled, textarea:disabled, select:disabled {
 }
 
 .field_error {
-    border: 1px solid red;
+    border: 1px solid var(--delete-button-color);
 }
+
+
+.field_set {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  min-height: 40px;
+  outline: none;
+  transition: all .2s ease-in-out;
+  font-size: 16px;
+}
+
+
 
 /* FORM INPUT TYPES */
 .form_input {
@@ -39,7 +182,7 @@ input:disabled, textarea:disabled, select:disabled {
 .form_input:focus {
     outline: 1px solid rgba(128,128,128,0.6);
 }
-  
+
 
 .form_checkbox {
     width: 20px;

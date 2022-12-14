@@ -4,6 +4,24 @@ PARTICLE STYLES
 .......
 */
 
+.input_border_error {
+  border-color: var(--bg-red-color);
+  border-style: solid;
+  border-width:1px;
+  background: rgba(var(--bg-red-color), 0.8);
+}
+.input_border_valid {
+  border-color: var(--bg-red-green);
+}
+.input_border_color {
+  border-color: var(--body-color);
+}
+.required_color {
+  color: var(--bg-red-color);
+}
+
+
+
 
 /* BORDER RADIUS */
 .brad_0 {
@@ -143,7 +161,6 @@ PARTICLE STYLES
 .border_tb5 {
     border-width:5px 0 !important;
 }
-
 .border_none {
     border-width:0 !important;
 }

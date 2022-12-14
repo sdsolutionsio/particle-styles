@@ -4,66 +4,64 @@ PARTICLE STYLES
 .......
 */
 
-/* styles that apply to everything */
+/* OVERALL APPLICATION FRAMEWORK */
 *,
 *:before,
 *:after {
-    /* everything should be border box */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-
 html {
-    overflow-y: hidden;
-    overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
+
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 nav {
-    display: flex;
+  display: flex;
+}
+header{
+  display:block;
+}
+main {
+  flex: auto;
 }
 footer {
-    display: flex;
-    align-items: center;
-    min-height: 50px;
+  display: block;
+  align-items: unset;
+  min-height: unset;
 }
 
-/* main div holding all structural elements */
+
+/* AUTHORING STRUCTURE ONLY */
 .site {
-    position:fixed; /* so 100% height works correctly in ios safari */
-    height:100%;
-    display: flex;
-    flex:1;
-    flex-direction: column;
-    /* stretch to fill screen */
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  position:fixed; /* so 100% height works correctly in ios safari */
+  height:100%;
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  /* stretch to fill screen */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* div holding main content under nav */
 .site-content {
-    display:flex;
-    flex:1;
-    flex-direction:column;
-    overflow-y:scroll;
-    overflow-x:hidden;
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
-
-.page_container {
-    display: flex;
-    min-height: 450px;
-    min-width: 280px;
-}
-
